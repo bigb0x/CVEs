@@ -1,6 +1,6 @@
 # Information
 ```
-Vulnerability Name  : Remote SQL Injections in Inout Blockchain FiatExchanger
+Vulnerability Name  : Remote Blind SQL Injections in Inout Blockchain FiatExchanger
 Product             : Inout Blockchain FiatExchanger
 version             : 2.2.1
 Date                : 2022-05-21
