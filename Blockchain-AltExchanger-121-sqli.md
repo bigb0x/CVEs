@@ -51,9 +51,6 @@ banner: '5.6.50'
 current database: 'inout_blockchain_altexchanger_db'
 
 <br>
-<kbd>(Blockchain-AltExchanger-121-sqli-1.png)</kbd>
-![Alt text](Blockchain-AltExchanger-121-sqli-1.png?raw=true "sqlmap screen")
-![Screenshot](Blockchain-AltExchanger-121-sqli-1.png)
 <img src="./resources/Blockchain-AltExchanger-121-sqli-1.png">
 <br>
 
@@ -107,6 +104,7 @@ Connection: Keep-alive
 ----------------------------------------------------
 
 <br>
+
 # Timeline
 ```
 2022-05-03: Discovered the bug
