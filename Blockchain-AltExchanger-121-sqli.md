@@ -54,7 +54,7 @@ current database: 'inout_blockchain_altexchanger_db'
 <kbd>(Blockchain-AltExchanger-121-sqli-1.png)</kbd>
 ![Alt text](Blockchain-AltExchanger-121-sqli-1.png?raw=true "sqlmap screen")
 ![Screenshot](Blockchain-AltExchanger-121-sqli-1.png)
-<img src="./Blockchain-AltExchanger-121-sqli-1.png">
+<img src="./resources/Blockchain-AltExchanger-121-sqli-1.png">
 <br>
 
 # 2- Vulnerable Parameter: marketcurrency (POST)
