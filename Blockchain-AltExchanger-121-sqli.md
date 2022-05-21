@@ -2,7 +2,7 @@
 ```
 Vulnerability Name  : Multiple Remote SQL Injections in Inout Blockchain AltExchanger
 Product             : Inout Blockchain AltExchanger
-version				: 1.2.1 
+version             : 1.2.1 
 Date				: 2022-05-21
 Vendor Site         : https://www.inoutscripts.com/products/inout-blockchain-altexchanger/
 Exploit Detail      : https://github.com/bigb0x/CVEs/Blockchain-AltExchanger-121-sqli.md
