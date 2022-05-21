@@ -2,12 +2,12 @@
 ```
 Vulnerability Name  : Multiple Remote SQL Injections in Inout Blockchain AltExchanger
 Product             : Inout Blockchain AltExchanger
-version             : 1.2.1 
-Date				: 2022-05-21
+version             : 1.2.1
+Date                : 2022-05-21
 Vendor Site         : https://www.inoutscripts.com/products/inout-blockchain-altexchanger/
 Exploit Detail      : https://github.com/bigb0x/CVEs/Blockchain-AltExchanger-121-sqli.md
 CVE-Number          : In Progess
-Exploit Author		: Mohamed N. Ali @MohamedNab1l
+Exploit Author      : Mohamed N. Ali @MohamedNab1l
 ```
 <br>
 
@@ -53,6 +53,7 @@ current database: 'inout_blockchain_altexchanger_db'
 <br>
 <kbd>(resources/Blockchain-AltExchanger-121-sqli-1.png)</kbd>
 ![Alt text](resources/Blockchain-AltExchanger-121-sqli-1.png?raw=true "sqlmap screen")
+![Screenshot](resources/Blockchain-AltExchanger-121-sqli-1.png)
 <br>
 
 # 2- Vulnerable Parameter: marketcurrency (POST)
