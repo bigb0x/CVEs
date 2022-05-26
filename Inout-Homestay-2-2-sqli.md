@@ -5,7 +5,7 @@ Product             : Inout Homestay
 version             : 2.2
 Date                : 2022-05-22
 Vendor Site         : https://www.inoutscripts.com/products/inout-homestay/
-POC				    : https://github.com/bigb0x/CVEs/blob/main/Inout-Homestay-2-2-sqli.md
+POC                 : https://github.com/bigb0x/CVEs/blob/main/Inout-Homestay-2-2-sqli.md
 CVE-Number          : In Progess
 Exploit Author      : Mohamed N. Ali @MohamedNab1l
 ```
