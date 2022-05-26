@@ -6,7 +6,7 @@ version             : 1.2.1
 Date                : 2022-05-21
 Vendor Site         : https://www.inoutscripts.com/products/inout-blockchain-altexchanger/
 Exploit Detail      : https://github.com/bigb0x/CVEs/Blockchain-AltExchanger-121-sqli.md
-CVE-Number          : In Progess
+CVE-Number          : CVE-2022-31487, CVE-2022-31488, CVE-2022-31489
 Exploit Author      : Mohamed N. Ali @MohamedNab1l
 ```
 <br>
