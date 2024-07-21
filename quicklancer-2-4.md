@@ -1,6 +1,5 @@
 # SQL Injection Vulnerability in Quicklancer 2.4
-A SQL injection vulnerability exists in the Quicklancer 2.4, GET parameter 'range2', that has time-based blind SQL injection and a boolean-based blind SQL injection, which can be exploited remotely by unauthenticated attacker by an 
-attacker to execute arbitrary SQL queries in the database.
+A SQL injection vulnerability exists in the Quicklancer 2.4, GET parameter 'range2', that has time-based blind SQL injection and a boolean-based blind SQL injection, which can be exploited remotely by unauthenticated attacker to execute arbitrary SQL queries in the database.
 
 ## POC
 
