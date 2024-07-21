@@ -2,11 +2,6 @@
 A SQL injection vulnerability exists in the Quicklancer 2.4, GET parameter 'range2', that has time-based blind SQL injection and a boolean-based blind SQL injection, which can be exploited remotely by unauthenticated attacker by an 
 attacker to execute arbitrary SQL queries in the database.
 
-![Banner](quicklancer/quicklancer1.jpg)
-
-
-![Banner](quicklancer/quicklancer2.jpg)
-
 ## POC
 
 ### Payloads:
@@ -47,6 +42,10 @@ back-end DBMS: MySQL >= 5.0.12
 [13:41:56] [INFO] retrieved: quicklancer_dbuser@localhost
 ```
 
+![Banner](quicklancer/quicklancer1.jpg)
+
+
+![Banner](quicklancer/quicklancer2.jpg)
 
 ## Contact
 
