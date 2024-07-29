@@ -41,13 +41,8 @@ back-end DBMS: MySQL >= 5.0.12
 [13:41:56] [INFO] retrieved: quicklancer_dbuser@localhost
 ```
 
-![Banner](quicklancer/quicklancer1.jpg)
-
-
-![Banner](quicklancer/quicklancer2.jpg)
 
 ## Contact
-
 For any suggestions or thoughts, please get in touch with [me](https://x.com/MohamedNab1l).
 
 
